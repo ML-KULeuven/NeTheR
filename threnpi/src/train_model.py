@@ -27,7 +27,7 @@ def train_model(model, data,labels,  epochs, single=False):
     val_loader = DataLoader(val_dataset, batch_size=64, shuffle=False, num_workers=4)
 
     # logger=TensorBoardLogger('tb_logs', default_hp_metric=False,log_graph=False)
-    trainer = L.Trainer(max_epochs=epochs, devices=[1,], callbacks=[EarlyStopping(monitor="val_loss", mode="min", patience=5)])
+    trainer = L.Trainer(max_epochs=epochs, devices=[0,], callbacks=[EarlyStopping(monitor="val_loss", mode="min", patience=5)])
     trainer.fit(model, train_loader, val_loader)
 
 
