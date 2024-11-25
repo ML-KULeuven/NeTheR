@@ -1,10 +1,12 @@
-/threnpi/Data/birds/
-/threnpi/Data/faces/
-/threnpi/Data/housing/
-/threnpi/Data/medical/
-/threnpi/Data/music/
-/threnpi/Data/objects/
+/threnpi/Data/birds
+/threnpi/Data/faces
+/threnpi/Data/housing
+/threnpi/Data/medical
+/threnpi/Data/music
+/threnpi/Data/objects
 /threnpi/lightning_logs
+.idea
+
 
 
 
