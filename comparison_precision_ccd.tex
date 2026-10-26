@@ -1,0 +1,46 @@
+\begin{tikzpicture}[
+  treatment line/.style={rounded corners=1.5pt, line cap=round, shorten >=1pt, line width=.5mm},
+  treatment label/.style={font=\large},
+  group line/.style={ultra thick},
+  scale={0.8},
+]
+
+\begin{axis}[
+  clip={false},
+  axis x line={center},
+  axis y line={none},
+  axis line style={-},
+  xmin={1},
+  ymax={0},
+  scale only axis={true},
+  width={\axisdefaultwidth},
+  ticklabel style={anchor=south, yshift=1.3*\pgfkeysvalueof{/pgfplots/major tick length}, font=\large},
+  every tick/.style={draw=black, line width=.5mm},
+  major tick style={yshift=.5*\pgfkeysvalueof{/pgfplots/major tick length}},
+  minor tick style={yshift=.5*\pgfkeysvalueof{/pgfplots/minor tick length}},
+  title style={yshift=\baselineskip},
+  xmax={6},
+  ymin={-4.5},
+  height={5\baselineskip},
+  xtick={1,2,3,4,5,6},
+  minor x tick num={3},
+  x dir={reverse},
+]
+
+\draw[treatment line] ([yshift=-2pt] axis cs:2.518181818181818, 0) |- (axis cs:2.018181818181818, -2.0)
+  node[treatment label, anchor=west] {Or And};
+\draw[treatment line] ([yshift=-2pt] axis cs:2.5272727272727273, 0) |- (axis cs:2.018181818181818, -3.0)
+  node[treatment label, anchor=west] {And Or};
+\draw[treatment line] ([yshift=-2pt] axis cs:3.1636363636363636, 0) |- (axis cs:2.018181818181818, -4.0)
+  node[treatment label, anchor=west] {nether};
+\draw[treatment line] ([yshift=-2pt] axis cs:4.1863636363636365, 0) |- (axis cs:4.890909090909091, -4.0)
+  node[treatment label, anchor=east] {$M'$};
+\draw[treatment line] ([yshift=-2pt] axis cs:4.213636363636364, 0) |- (axis cs:4.890909090909091, -3.0)
+  node[treatment label, anchor=east] {NC};
+\draw[treatment line] ([yshift=-2pt] axis cs:4.390909090909091, 0) |- (axis cs:4.890909090909091, -2.0)
+  node[treatment label, anchor=east] {Multimodal};
+\draw[group line] (axis cs:2.518181818181818, -1.3333333333333333) -- (axis cs:3.1636363636363636, -1.3333333333333333);
+\draw[group line] (axis cs:4.1863636363636365, -1.3333333333333333) -- (axis cs:4.390909090909091, -1.3333333333333333);
+
+\end{axis}
+\end{tikzpicture}

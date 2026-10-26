@@ -1,0 +1,2 @@
+# Installs NeTheR plus the Jupyter tools needed for the example notebook.
+-e .[notebook]
